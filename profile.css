@@ -1,0 +1,196 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #aadda0,
+        #79d3b7, 
+        #46b389,
+        #0c683e);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.profile {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #dbf8db; 
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.web-toggles {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.web-toggles a {
+    margin: 0px;
+    text-decoration: none;
+    color: #2e8b57; 
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.web-toggles a:hover {
+    color: #228b22; 
+    background-color: #d1ead1;
+}
+
+hr {
+    border: 1px solid #90ee90; 
+    margin: 20px 0;
+}
+
+.profileinfo {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.profileinfo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profileinfo h1 {
+    color: #006400; /* Dark green for headings */
+}
+
+.profileinfo p {
+    color: #556b2f; /* Olive green for paragraphs */
+}
+
+.introduction, .hobbies, .socials{
+    padding: 20px ;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.hobbies1 {
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    align-items: stretch;
+    display: flex;
+}
+
+.hobby {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px ;
+    border-radius: 5px;
+    background-color: #d2fac8;
+    text-align: center;
+    margin: 10px;
+    white-space: pre-wrap;
+
+}
+
+.hobby img {
+    width: 200px;
+}
+
+.introduction h1, .hobbies h1, .socials h1 {
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+.introduction h2 , .hobbies h2{
+    color: #2e8b57;
+    margin-bottom: 10px;
+}
+
+.introduction p,  .hobbies p , .hobby h3{
+    color: #556b2f;
+}
+
+.introduction pre {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    font-size: medium;
+    color: #556b2f;
+    white-space: pre-wrap;
+}
+
+.socials {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.socials-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    text-align: center;
+}
+
+.socials-links a {
+    text-decoration: none;
+    color: #2e8b57;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+}
+
+.socials-links a:hover {
+    background-color: #d1ead1;
+    color: #228b22;
+}
+
+.end p {
+    text-align: center;
+    color: #556b2f;
+    font-size: small;
+    transition: transform 0.3s ease;
+    display: block; 
+    padding: 30px;
+}
+.end p:hover {
+    transform: scale(1.05); 
+    font-weight: bolder;
+}
+.end-top {
+    text-align: right;
+}
+.end-top a {
+    text-decoration: none;
+    color: #5fb986;
+    font-size: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 30px;
+}
+
+.end-top a:hover {
+    color: #114d11;
+    font-weight: bolder;
+}
+
+
+.profileinfo,
+.introduction,
+.hobby,
+.socials {
+    transition: transform 0.3s ease; 
+}
+
+.profileinfo:hover,
+.introduction:hover,
+.hobby:hover,
+.socials:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
