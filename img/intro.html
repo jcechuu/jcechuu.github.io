@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jancee's Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <button class="sidebar-toggle-button"><span class="material-symbols-rounded">menu</span></button>
+    <div id="sidebar-container"></div>
+    <div class="bg-wrapper">
+        <main>
+            <div class="container">
+                <div class="introduction" id="intro">
+                    <h1 style="text-align: center;">Introduction</h1>
+                    <h2>About Me</h2>
+                    <pre>
+                        Good Day! I am <strong>Jancee C. Salinas</strong>, 20 years old and I live in Cardona, Rizal. I am currently taking Bachelor of Science in Computer Engineering in the University of Rizal System-Morong Campus.
+                        
+                        Read through and get to know more about me! :))
+                    </pre>
+                </div>
+            </div>
+            <div class="container">
+                <div class="randos">
+                    <h1>Random facts about me</h1>
+                    <ul>
+                        <li>&#127952; I like playing volleyball, though I'm not very good at it.</li>
+                        <li> 💚🖤 My favorite color is black and green.</li>
+                        <li><img src="https://i.pinimg.com/736x/31/65/e0/3165e057af59a189174cfd7c857b451f.jpg" alt=""> My OG Kpop group is <a href="https://twice.jype.com/" target="_blank">Twice</a>.</li>
+                        <li> My Go to karaoke song is If I ain't got you or Weak.</li>
+                        <li> 📸 I love taking pictures, specifically pictures of sunsets, nature, and anything I find aesthetic.</li>
+                        <li id="song-item">
+                            My favorite song atm is <span id="song-title-artist" style="cursor: pointer; color: #0c471e; font-weight: bold;">Thinking of you - Katy Perry</span>
+                            <audio id="song-audio" controls style="display: none;">
+                                <source src="/img/Thinking Of You - Katy Perry.m4a" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>    
+    </div>
+    <script src="sidebar.js"></script>
+</body>
+</html>
