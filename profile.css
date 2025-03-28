@@ -20,8 +20,8 @@ body {
 
 .bg-wrapper {
     background-image: url(https://64.media.tumblr.com/bfe90ef1addacef577bc2813d1cfd001/807f9e5a5e0ce538-eb/s1280x1920/5434e6201950f308e365f0e00496bb2e28f624f6.gifv);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
+    background-size: 100%;
     flex: 0; 
     display: flex; 
     flex-direction: column; 
