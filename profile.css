@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #124e33;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    position: relative;
+}
+
+.bg-wrapper {
+    background-image: url(https://64.media.tumblr.com/bfe90ef1addacef577bc2813d1cfd001/807f9e5a5e0ce538-eb/s1280x1920/5434e6201950f308e365f0e00496bb2e28f624f6.gifv);
+    flex: 0; 
+    background-repeat: repeat-y;
+    background-size: 100%;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.sidebar.collapsed {
+    width: 85px;
+}
+
+.sidebar.collapsed .nav-link .nav-label {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-nav .nav-link .nav-label {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar {
+    position: sticky;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 32px);
+    background: #124e33;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+
+.sidebar .sidebar-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 25px 20px;
+    justify-content: space-between;
+}
+
+.sidebar-header .sidebar-toggler {
+    position: absolute;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #124e33;
+    color: #ffffff;
+    transition: o.4s;
+}
+
+.sidebar-header .sidebar-toggler:hover {
+    color: #0c683e;
+    box-shadow: 0 0 20px #40b681;
+    background: #eef2ff;}
+
+.sidebar-header .sidebar-toggler span {
+    font-size: 1.7rem;
+    transition: 0.4s ease;
+}
+
+.sidebar.collapsed .sidebar-toggler span {
+    transform: rotate(180deg);
+}
+
+.sidebar-nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    padding: 0 15px;
+    flex-direction: column;
+    transform: translateY(15px);
+}
+
+.sidebar-nav .nav-item .nav-link {
+    color: #ffffff;
+    display: flex;
+    gap: 12px;
+    white-space: nowrap;
+    padding: 11px 15px;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+.sidebar-nav .nav-item:hover > .nav-link {
+    color: #0c683e;
+    box-shadow: 0 0 20px #40b681;
+    background: #eef2ff;
+}
+
+.sidebar-nav .nav-item {
+    position: relative;
+}
+
+.sidebar-nav .nav-item:hover .nav-tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(50%);
+    transition: 0.4s ease;
+}
+
+.sidebar-nav .nav-tooltip {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: -10px;
+    left: calc(100% + 20px);
+    color: #124e33;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: #ffffff;
+    white-space: nowrap;
+    box-shadow: 0 0 20px #40b681;
+    transition: 0s;
+}
+
+main {
+    padding: min(30px, 7%);
+}
+
+main p {
+    color: #002515;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.container {
+    border: 1px solid #0c683e;
+    border-radius: 1em;
+    box-shadow: 0 0 20px #51c490;
+    margin-bottom: 20px;
+    padding: 50px;
+    background: rgba(250, 250, 250, .1);
+    backdrop-filter: blur(30px);
+    transform: translateY(30px);
+    opacity: 0;    
+    animation: slide-in 1s ease forwards;
+    
+    h1, h2, p{margin-top: 1em;}
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+.container .image img {
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: solid #0c683e;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.container .image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #40b681;
+    background: #eef2ff;
+}
+
+.container .info p{
+    color: #000000;
+    font-size: 20px;
+}
+  
+
+.socials-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.socials-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.socials-links a:hover {
+    background-color: #f0f1f1;
+    color: #00661f;
+    box-shadow: 0 0 20px #8eeec3;
+}
+
+.end p {
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: block; 
+    padding: 30px;
+}
+.end p:hover {
+    transform: scale(1.05); 
+    font-weight: bolder;
+}
+
+.introduction pre {
+    white-space: pre-wrap;
+}
+
+.randos h1 {
+    margin-bottom: 15px;
+    justify-items: left;
+}
+
+.randos {
+    justify-items: center;
+}
+
+.randos li{
+    border-radius: 6px;
+    width: 95%;
+    max-width: 1200%;
+    padding: 10px;
+    backdrop-filter: blur(30px);
+    list-style: none;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.randos li:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px #40b681;
+    background: #eef2ff;
+}
+
+.randos li img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.randos li a{
+    text-decoration: none;
+    color: #0c471e;
+    font-weight: bold;
+}
+
+.hobbies-container { /* New container for hobbies */
+    border: 1px solid #0c683e;
+    border-radius: 1em;
+    box-shadow: 0 0 20px #51c490;
+    margin-bottom: 20px;
+    padding: min(3em, 15%);
+    background: rgba(250, 250, 250, .1);
+    backdrop-filter: blur(30px);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+}
+
+.hobbies1 { /* Container for hobby items */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hobby-container { /* Individual hobby containers */
+    border: 1px solid #0c683e;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(250, 250, 250, .1);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    justify-content: center;
+}
+
+.hobbies-container img {
+    width: 70%;
+    height: 70%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.hobbies-container hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hobby-container:hover {
+    transform: scale(1.05);
+    background-color: #9ecfa6;
+    color: #00661f;
+    box-shadow: 0 0 20px #8eeec3;
+}
+
+
+.gallery-container { /* Container for hobby items */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.photos { /* Individual hobby containers */
+    border: 1px solid #0c683e;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(250, 250, 250, .1);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    justify-content: center;
+}
+
+.photos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.photos:hover {
+    transform: scale(1.05);
+    background-color: #9ecfa6;
+    color: #00661f;
+    box-shadow: 0 0 20px #8eeec3;
+}
+
+.gallery hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* Existing CSS... */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Remove sidebar from grid on small screens */
+    }
+
+    .sidebar {
+        position: fixed; /* Overlay sidebar */
+        top: 0;
+        left: -250px; /* Hide off-screen initially */
+        width: 200px; /* Smaller width for mobile */
+        height: 100vh;
+        transition: left 0.3s ease;
+        z-index: 1000; /* High z-index to overlay content */
+    }
+
+    .sidebar.active {
+        left: 0; /* Show sidebar when active */
+    }
+    .sidebar .sidebar-toggler {
+        display: none; /* Hide the initial toggler button on small screens */
+    }
+
+    .sidebar-toggle-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #124e33;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 1001; /* Above sidebar */
+        display: block; /* Show on mobile */
+        transition: o.4s;
+    }
+
+    .sidebar-toggle-button.collapsed {
+        display: block;
+    }
+
+    .sidebar-toggle-button.expanded {
+        display: none;
+    }
+
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .sidebar.collapsed .nav-link {
+        width: 40px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .sidebar-toggle-button {
+        display: none; /* Hide on desktop */
+    }
+}
